@@ -9,7 +9,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   button.setAttribute("disabled", true);
 
   // Interact with foo actor, calling the greet method
-  const result = await lesson2_backend.quickSort(arr);
+  const result = await lesson2_backend.qsort(arr);
 
   button.removeAttribute("disabled");
 

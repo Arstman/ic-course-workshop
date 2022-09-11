@@ -7,7 +7,7 @@ actor {
         sort(newArr,0,newArr.size()-1);
         Array.freeze(newArr)
     };
-
+// the sorting func
     func sort(arr:[var Int],low:Nat,high:Nat){
         if(low>=high) return;
         var temp = arr[low];
@@ -27,8 +27,8 @@ actor {
         if(left >= 1) sort(arr,low,left-1);
         sort(arr,left+1,high);
     };
-
-    public func quickSort(arr:[Int]) : async [Int] {
+// the public for frontend to call
+    public func qsort(arr:[Int]) : async [Int] {
         qSort(arr)
     };
 };
