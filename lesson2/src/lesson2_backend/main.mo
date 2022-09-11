@@ -2,9 +2,9 @@ import Array "mo:base/Array";
 import Int "mo:base/Int";
 import Nat "mo:base/Nat";
 actor {
-    func qSort(arr:[Int]) : [Int] {
+    func quicksort(arr:[Int]) : [Int] {
         var newArr:[var Int] = Array.thaw(arr);
-        sort(newArr,0,newArr.size()-1);
+        quicksort(newArr,0,newArr.size()-1);
         Array.freeze(newArr)
     };
 // the sorting func
@@ -29,7 +29,7 @@ actor {
     };
 // the public for frontend to call
     public func qsort(arr:[Int]) : async [Int] {
-        qSort(arr)
+        quicksort(arr)
     };
 };
 
