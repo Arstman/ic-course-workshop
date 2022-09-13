@@ -4,7 +4,7 @@ import Nat "mo:base/Nat";
 actor {
     func quicksort(arr:[Int]) : [Int] {
         var newArr:[var Int] = Array.thaw(arr);
-        quicksort(newArr,0,newArr.size()-1);
+        sort(newArr,0,newArr.size()-1);
         Array.freeze(newArr)
     };
 // the sorting func
