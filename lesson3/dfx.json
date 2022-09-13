@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.11.2",
+  "canisters": {
+    "lesson3_backend": {
+      "type": "motoko",
+      "main": "src/lesson3_backend/increment_counter.mo"
+    },
+    "lesson3_frontend": {
+      "type": "assets",
+      "source": [
+        "src/lesson3_frontend/assets"
+      ],
+      "dependencies": [
+        "lesson3_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
